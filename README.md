@@ -4,9 +4,6 @@
 This project aims to analyze a travel booking company, focusing on profit analysis and the various factors that affect their attainment.Using Power BI to design graphical analysis that allows for useful insights for different areas.  
 
 
-### raising_hand **Status**
-2.1, Ironhack Data Analytic:second project
-
 ### **Data Model**
 
 The dataset has been generated using the Python faker library, and the script can be found in this repository (travel_data_generator). With the generated CSVs, a DuckDB database has been created and the various dimension tables have been loaded into Power BI. A fact table has been created to design the visualizations.
@@ -14,7 +11,8 @@ The dataset has been generated using the Python faker library, and the script ca
 ![Image](./Images/logical_data_model.JPG)
 
 
-An additional CSV has been added to the database to group countries by region and sub-region. Within Power BI, a fact table has been created to work with by combining multiple tables and transforming several columns.
+An additional CSV has been added to the database to group countries by regions and subregions. Within Power BI, a fact table has been created to work with by combining multiple tables and transforming various columns. Additionally, numerous measures have been generated to obtain desired insights.
+
 
 ### **Dashboards**
 
