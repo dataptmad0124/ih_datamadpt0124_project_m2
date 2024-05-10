@@ -3,8 +3,6 @@
 
 This project aims to analyze a travel booking company, focusing on profit analysis and the various factors that affect their attainment.Using Power BI to design graphical analysis that allows for useful insights for different areas.  
 
-![Image](https://www.bicimad.com/sites/default/files/styles/news_full/public/2023-03/243A0004.jpg.webp?itok=AqUARnFb)
-
 
 ### raising_hand **Status**
 2.1, Ironhack Data Analytic:second project
