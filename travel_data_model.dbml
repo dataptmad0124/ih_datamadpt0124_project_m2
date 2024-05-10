@@ -1,0 +1,82 @@
+Table customers {
+  CustomerID int [pk]
+  Name varchar
+  Email varchar
+  Phone varchar
+  Gender varchar
+  CustumerCountry varchar
+}
+
+Table agents {
+  AgentID int [pk]
+  Name varchar
+  ContactNumber varchar
+}
+
+Table bookings {
+  BookingID int [pk]
+  CustomerID int [ref: > customers.CustomerID]
+  AgentID int [ref: > agents.AgentID]
+  DestinationID int [ref: > destinations.DestinationID]
+  HotelID int [ref: > hotels.HotelID]
+  FlightID int [ref: > flights.FlightID]
+  BookingDate datetime
+}
+
+Table flights {
+  FlightID int [pk]
+  Airline varchar
+  Origin varchar
+  Destination varchar
+  DepartureTime datetime
+  ArrivalTime datetime
+  Price float
+  
+}
+
+Table hotels {
+  HotelID int [pk]
+  Name varchar
+  Location varchar
+  Rating int
+  PricePerNight float
+}
+
+Table tickets {
+  TicketID int [pk]
+  BookingID int [ref: > bookings.BookingID]
+  FlightID int [ref: > flights.FlightID]
+  Price float
+  TicketDate datetime
+}
+
+Table payments {
+  PaymentID int [pk]
+  BookingID int [ref: > bookings.BookingID]
+  Amount float
+  PaymentDate datetime
+  PaymentMethod varchar
+}
+
+Table destinations {
+  DestinationID int [pk]
+  Name varchar
+  Country varchar
+  PopularAttraction varchar
+  PopularAttractionType varchar
+}
+
+Table promotions {
+  PromotionID int [pk]
+  Description varchar
+  Discount float
+  ValidFrom datetime
+  ValidTo datetime
+}
+
+Table reviews {
+  ReviewID int [pk]
+  BookingID int [ref: > bookings.BookingID]
+  Rating int
+  Comment text
+}
